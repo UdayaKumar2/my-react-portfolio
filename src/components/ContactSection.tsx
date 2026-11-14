@@ -222,7 +222,6 @@ export function ContactSection() {
                     <Send className="w-4 h-4" />
                     <span>Compose Email</span>
                   </a>
-
                   <a
                     href={PROFILE_DATA.linkedin}
                     target="_blank"
