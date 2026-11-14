@@ -1,4 +1,5 @@
 import portrait3dImg from '../assets/images/udayakumar_3d_portrait_1794631182260.jpg';
+import { getExperience } from './currentdate';
 
 export interface LanguageProficiency {
   language: string;
@@ -41,7 +42,7 @@ export const PROFILE_DATA: ProfileData = {
     'Building scalable software systems through modern web technologies, backend engineering and intelligent automation.',
   summary:
     'Full Stack Software Developer with 2.6 years of professional experience specializing in React and ASP.NET development. Experienced in building web applications, REST APIs, Windows desktop applications, real-time monitoring systems and automation solutions.',
-  experienceSpan: '2.6 Years',
+  experienceSpan: `${getExperience()} Years`,
   aboutPillars: [
     {
       id: 'frontend',

@@ -3,6 +3,7 @@ import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'mo
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import { EXPERIENCE_ENTRIES } from '../data/experience';
 import { RevealSection, TiltCard3D, TiltLayer3D } from './MotionPrimitives';
+import { getExperience } from '../data/currentdate';
 
 export function ExperienceSection() {
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -30,7 +31,7 @@ export function ExperienceSection() {
               Career Timeline
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#94A3B8]">
-              2.6 years of progressive software development experience across full-stack
+              {getExperience()} years of progressive software development experience across full-stack
               web platforms, RESTful services, and desktop automation tools.
             </p>
           </div>
@@ -63,11 +64,10 @@ export function ExperienceSection() {
                 {/* Timeline node marker */}
                 <span
                   aria-hidden="true"
-                  className={`absolute -left-6 sm:-left-10 top-7 w-4 h-4 rounded-full border-2 ${
-                    entry.status === 'Current'
+                  className={`absolute -left-6 sm:-left-10 top-7 w-4 h-4 rounded-full border-2 ${entry.status === 'Current'
                       ? 'bg-[#38BDF8] border-[#080B16] shadow-[0_0_16px_rgba(56,189,248,0.65)]'
                       : 'bg-[#10182A] border-[#8B5CF6]'
-                  }`}
+                    }`}
                 />
 
                 <TiltCard3D
